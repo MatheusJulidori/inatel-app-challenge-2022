@@ -1,12 +1,9 @@
 
-import { Typography } from "@mui/material"
 
-
-const Page = ({title,Component}) =>{
+const Page = ({Component}) =>{
 
     return(
         <>
-            <Typography variant='h3' gutterBottom>{title}</Typography>
            <Component/>
         </>
     )

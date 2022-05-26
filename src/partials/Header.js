@@ -9,9 +9,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { useNavigate } from "react-router-dom";
 
 
 const Header = () => {
+
+  let navigate = useNavigate();
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -32,6 +36,7 @@ const Header = () => {
             component="a"
             href="/"
             sx={{
+              flexGrow: 1,
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
@@ -72,13 +77,13 @@ const Header = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-                <MenuItem  onClick={handleCloseNavMenu}>
+                <MenuItem  onClick={()=>{handleCloseNavMenu();navigate('/')}} >
                   <Typography textAlign="center">Home</Typography>
                 </MenuItem>
-                <MenuItem  onClick={handleCloseNavMenu}>
+                <MenuItem  onClick={()=>{handleCloseNavMenu();navigate('/installers')}} >
                   <Typography textAlign="center">Installers</Typography>
                 </MenuItem>
-                <MenuItem  onClick={handleCloseNavMenu}>
+                <MenuItem  onClick={()=>{handleCloseNavMenu();navigate('/plans')}} >
                   <Typography textAlign="center">Plans</Typography>
                 </MenuItem>
             </Menu>
@@ -91,32 +96,32 @@ const Header = () => {
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
+              flexGrow: 0,
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              fontSize: "20px",
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
             Inatel APP Challenge
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>          
+          <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>          
               <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                onClick={()=>{handleCloseNavMenu();navigate('/')}}
+                sx={{ my: 2, color: 'white', display: 'block',fontSize:'16px'}}
               >
                 Home
               </Button>
               <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                onClick={()=>{handleCloseNavMenu();navigate('/installers')}}
+                sx={{ my: 2, color: 'white', display: 'block',fontSize:'16px'}}
               >
                 Installers
               </Button>
               <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                onClick={()=>{handleCloseNavMenu();navigate('/plans')}}
+                sx={{ my: 2, color: 'white', display: 'block',fontSize:'16px' }}
               >
                 Plans
               </Button>

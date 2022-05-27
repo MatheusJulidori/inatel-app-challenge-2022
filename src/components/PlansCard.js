@@ -25,9 +25,9 @@ const PlansCard = ({ isp, data_capacity, download_speed, upload_speed, price_per
                 subheader={`Price: $${price_per_month} per month`}
             />
             <CardContent>
-                <Typography>Data Capacity: {data_capacity}</Typography>
-                <Typography>Download Speed: {download_speed}</Typography>
-                <Typography>Upload Speed: {upload_speed}</Typography>
+                <Typography>Data Capacity: {data_capacity} Gb</Typography>
+                <Typography>Download Speed: {download_speed} Mb/s</Typography>
+                <Typography>Upload Speed: {upload_speed} Mb/s</Typography>
                 <Typography>Internet Type: {type_of_internet}</Typography>
             </CardContent>
             <CardActions disableSpacing>

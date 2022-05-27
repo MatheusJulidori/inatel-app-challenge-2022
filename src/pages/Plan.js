@@ -20,9 +20,12 @@ const Plan = () => {
 
     return (
         <Container maxWidth='xl'>
-            <Typography variant='h2'>{location.state.name}</Typography>
-            <Typography variant='h5'>Price per km: ${location.state.price_per_km}</Typography>
-            <Typography variant='h5'>Rating: {location.state.rating}/10</Typography>
+            <Typography variant='h2'>{location.state.isp}</Typography>
+            <Typography variant='h5'>Price per month: ${location.state.price_per_month}</Typography>
+            <Typography variant='h5'>Data Capacity: {location.state.data_capacity} Gb</Typography>
+            <Typography variant='h5'>Download Speed: {location.state.download_speed} Mb/s</Typography>
+            <Typography variant='h5'>Upload Speed: {location.state.upload_speed} Mb/s</Typography>
+            <Typography variant='h5'>Internet type: {location.state.internet_type}</Typography>
             <Box sx={{
                 border: '1px solid black',
                 width: '100%',

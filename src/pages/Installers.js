@@ -4,6 +4,7 @@ import Loading from '../components/Loading';
 import { Grid } from "@mui/material";
 import InstallersCard from '../components/InstallersCard'
 
+
 const Installers = () => {
 
     const [isLoading, setIsLoading] = useState(true)
@@ -34,7 +35,7 @@ const Installers = () => {
                             name={item.name}
                             rating={item.rating}
                             price_per_km={item.price_per_km}
-                            id={item.id}
+                            item={item}
                         />
                     </Grid>
                 )

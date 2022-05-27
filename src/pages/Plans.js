@@ -38,7 +38,7 @@ const Plans = () =>{
                         download_speed={item.download_speed}
                         upload_speed={item.upload_speed}
                         type_of_internet={item.type_of_internet}
-                        id={item.id}
+                        item={item}
                     />
                 </Grid>
             )

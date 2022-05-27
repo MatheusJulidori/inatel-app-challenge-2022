@@ -14,12 +14,12 @@ const Home = () => {
             display:'flex',alignItems:'center',justifyContent:'center', height:'90%'
         }}>
             <Grid container spacing={2}>
-                <Grid item xs={6} sx={{display:"flex",alignItems:"center",justifyContent:'center'}}>
+                <Grid item xs={12} md={6} sx={{display:"flex",alignItems:"center",justifyContent:'center'}}>
                     <Box>
                         <Button
                         sx={{
-                            width: '600px',
-                            height:'120px',
+                            width:{ md: '600px',xs:'300px'},
+                            height:{md:'120px',xs:'80px'},
                             backgroundColor:'#00819d',
                             color:'white',
                             '&:hover':{
@@ -33,12 +33,12 @@ const Home = () => {
                         </Button>
                     </Box>
                 </Grid>
-                <Grid item xs={6} sx={{display:"flex",alignItems:"center",justifyContent:'center'}}>
+                <Grid item xs={12} md={6} sx={{display:"flex",alignItems:"center",justifyContent:'center'}}>
                     <Box>
                         <Button
                         sx={{
-                            width: '600px',
-                            height:'120px',
+                            width:{ md: '600px',xs:'300px'},
+                            height:{md:'120px',xs:'80px'},
                             backgroundColor:'#00819d',
                             color:'white',
                             '&:hover':{

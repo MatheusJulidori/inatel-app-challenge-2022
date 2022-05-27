@@ -32,7 +32,7 @@ const Plan = () => {
                 height: 'auto',
             }}>
             </Box>
-            <Typography variant='h4'>Plans: </Typography>
+            <Typography variant='h4'>Installers: </Typography>
 
             <Grid container spacing={2} direction="row"
                 justifyContent="space-evenly"
